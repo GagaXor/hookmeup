@@ -14,9 +14,10 @@ import { useOptionalUser } from "~/utils";
 import {
   RiMapPin2Fill,
   RiPhoneFill,
-  RiMenuFoldFill,
-  RiMenu3Line,
+  RiMenFill,
+  RiMenuFill,
 } from "react-icons/ri";
+import {HiChartPie, HiViewBoards, HiInbox, HiUser, HiShoppingBag, HiTable, HiArrowSmRight} from "react-icons/hi"
 import { useState } from "react";
 export const meta: MetaFunction = () => [{ title: "Remix Notes" }];
 
@@ -34,11 +35,11 @@ export default function Index() {
       >
         <Navbar.Brand href="#">
           <div className="text-white" onClick={() => setCollapsed(!collapsed)}>
-            <RiMenu3Line className="text-lg font-bold "></RiMenu3Line>
+            <RiMenuFill className="text-lg font-bold "></RiMenuFill>
           </div>
 
           <img
-            src="icons8-doggy-51.png"
+            src="/icons8-doggy-51.png"
             className="mr-3 h-6 sm:h-9"
             alt="HookMeUp"
           />
@@ -59,16 +60,20 @@ export default function Index() {
             }
           >
             <Dropdown.Header>
-              <span className="block text-sm">Bonnie Green</span>
+              <span className="block text-md font-bold">Bonnie Green</span>
+              <span className="block text-md font-bold">@bonniegreen</span>
               <span className="block truncate text-sm font-medium">
-                name@flowbite.com
+                bonniegreen@hookmeup.com
               </span>
             </Dropdown.Header>
-            <Dropdown.Item>Dashboard</Dropdown.Item>
-            <Dropdown.Item>Settings</Dropdown.Item>
-            <Dropdown.Item>Earnings</Dropdown.Item>
+            <Dropdown.Item>Sign out</Dropdown.Item>
+            <Dropdown.Item>Location: Nigeria</Dropdown.Item>
             <Dropdown.Divider />
             <Dropdown.Item>Sign out</Dropdown.Item>
+            <Dropdown.Divider />
+            <Dropdown.Item>Settings</Dropdown.Item>
+            <Dropdown.Divider />
+           
           </Dropdown>
         </div>
       </Navbar>
@@ -77,39 +82,62 @@ export default function Index() {
         <div className="fixed z-10 w-fit">
           <Sidebar
             collapsed={collapsed}
-            hidden={collapsed}
+            
             aria-label="Default sidebar example"
           >
-            <Sidebar.Items>
-              <Sidebar.ItemGroup>
-                <Sidebar.Item href="#" icon={RiPhoneFill}>
-                  Dashboard
-                </Sidebar.Item>
-                <Sidebar.Item
-                  href="#"
-                  icon={RiPhoneFill}
-                  label="Pro"
-                  labelColor="alternative"
-                >
-                  Kanban
-                </Sidebar.Item>
-                <Sidebar.Item href="#" icon={RiPhoneFill} label="3">
-                  Inbox
-                </Sidebar.Item>
-                <Sidebar.Item href="#" icon={RiPhoneFill}>
-                  Users
-                </Sidebar.Item>
-                <Sidebar.Item href="#" icon={RiPhoneFill}>
-                  Products
-                </Sidebar.Item>
-                <Sidebar.Item href="#" icon={RiPhoneFill}>
-                  Sign In
-                </Sidebar.Item>
-                <Sidebar.Item href="#" icon={RiPhoneFill}>
-                  Sign Up
-                </Sidebar.Item>
-              </Sidebar.ItemGroup>
-            </Sidebar.Items>
+            <Sidebar.Logo
+      href="#"
+      img="cons8-doggy-51.png"
+      imgAlt="HookMeUp logo"
+    >
+      HookMeUp
+    </Sidebar.Logo>
+    <Sidebar.Items>
+      <Sidebar.ItemGroup>
+        <Sidebar.Item
+          href="#"
+          icon={HiChartPie}
+        >
+          Dashboard
+        </Sidebar.Item>
+        <Sidebar.Item
+          href="#"
+          icon={HiViewBoards}
+        >
+          Kanban
+        </Sidebar.Item>
+        <Sidebar.Item
+          href="#"
+          icon={HiInbox}
+        >
+          Inbox
+        </Sidebar.Item>
+        <Sidebar.Item
+          href="#"
+          icon={HiUser}
+        >
+          Users
+        </Sidebar.Item>
+        <Sidebar.Item
+          href="#"
+          icon={HiShoppingBag}
+        >
+          Products
+        </Sidebar.Item>
+        <Sidebar.Item
+          href="#"
+          icon={HiArrowSmRight}
+        >
+          Sign In
+        </Sidebar.Item>
+        <Sidebar.Item
+          href="#"
+          icon={HiTable}
+        >
+          Sign Up
+        </Sidebar.Item>
+      </Sidebar.ItemGroup>
+    </Sidebar.Items>
           </Sidebar>
         </div>
 
@@ -214,13 +242,7 @@ export default function Index() {
                   </div>
                 ))}
               </div>
-              <Pagination
-                className="justify-center"
-                currentPage={1}
-                onPageChange={onPageChange}
-                showIcons={true}
-                totalPages={100}
-              ></Pagination>
+              
             </div>
           </div>
         </main>

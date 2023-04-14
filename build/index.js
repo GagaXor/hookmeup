@@ -296,7 +296,7 @@ function validateEmail(email) {
 }
 
 // app/routes/_index.tsx
-var import_ri = require("react-icons/ri"), import_react6 = require("react"), import_jsx_runtime3 = require("react/jsx-runtime"), meta = () => [{ title: "Remix Notes" }];
+var import_ri = require("react-icons/ri"), import_hi = require("react-icons/hi"), import_react6 = require("react"), import_jsx_runtime3 = require("react/jsx-runtime"), meta = () => [{ title: "Remix Notes" }];
 function Index() {
   let [collapsed, setCollapsed] = (0, import_react6.useState)(!0), user = useOptionalUser();
   function onPageChange() {
@@ -310,11 +310,11 @@ function Index() {
         className: " fixed left-0 right-0 top-0 z-20",
         children: [
           /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)(import_flowbite_react.Navbar.Brand, { href: "#", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "text-white", onClick: () => setCollapsed(!collapsed), children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_ri.RiMenu3Line, { className: "text-lg font-bold " }) }),
+            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "text-white", onClick: () => setCollapsed(!collapsed), children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_ri.RiMenuFill, { className: "text-lg font-bold " }) }),
             /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
               "img",
               {
-                src: "icons8-doggy-51.png",
+                src: "/icons8-doggy-51.png",
                 className: "mr-3 h-6 sm:h-9",
                 alt: "HookMeUp"
               }
@@ -336,14 +336,17 @@ function Index() {
               ),
               children: [
                 /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)(import_flowbite_react.Dropdown.Header, { children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { className: "block text-sm", children: "Bonnie Green" }),
-                  /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { className: "block truncate text-sm font-medium", children: "name@flowbite.com" })
+                  /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { className: "block text-md font-bold", children: "Bonnie Green" }),
+                  /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { className: "block text-md font-bold", children: "@bonniegreen" }),
+                  /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { className: "block truncate text-sm font-medium", children: "bonniegreen@hookmeup.com" })
                 ] }),
-                /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_flowbite_react.Dropdown.Item, { children: "Dashboard" }),
-                /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_flowbite_react.Dropdown.Item, { children: "Settings" }),
-                /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_flowbite_react.Dropdown.Item, { children: "Earnings" }),
+                /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_flowbite_react.Dropdown.Item, { children: "Sign out" }),
+                /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_flowbite_react.Dropdown.Item, { children: "Location: Nigeria" }),
                 /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_flowbite_react.Dropdown.Divider, {}),
-                /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_flowbite_react.Dropdown.Item, { children: "Sign out" })
+                /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_flowbite_react.Dropdown.Item, { children: "Sign out" }),
+                /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_flowbite_react.Dropdown.Divider, {}),
+                /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_flowbite_react.Dropdown.Item, { children: "Settings" }),
+                /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_flowbite_react.Dropdown.Divider, {})
               ]
             }
           ) })
@@ -351,127 +354,165 @@ function Index() {
       }
     ),
     /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "flex", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "fixed z-10 w-fit", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "fixed z-10 w-fit", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)(
         import_flowbite_react.Sidebar,
         {
           collapsed,
-          hidden: collapsed,
           "aria-label": "Default sidebar example",
-          children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_flowbite_react.Sidebar.Items, { children: /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)(import_flowbite_react.Sidebar.ItemGroup, { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_flowbite_react.Sidebar.Item, { href: "#", icon: import_ri.RiPhoneFill, children: "Dashboard" }),
+          children: [
             /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
-              import_flowbite_react.Sidebar.Item,
+              import_flowbite_react.Sidebar.Logo,
               {
                 href: "#",
-                icon: import_ri.RiPhoneFill,
-                label: "Pro",
-                labelColor: "alternative",
-                children: "Kanban"
+                img: "cons8-doggy-51.png",
+                imgAlt: "HookMeUp logo",
+                children: "HookMeUp"
               }
             ),
-            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_flowbite_react.Sidebar.Item, { href: "#", icon: import_ri.RiPhoneFill, label: "3", children: "Inbox" }),
-            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_flowbite_react.Sidebar.Item, { href: "#", icon: import_ri.RiPhoneFill, children: "Users" }),
-            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_flowbite_react.Sidebar.Item, { href: "#", icon: import_ri.RiPhoneFill, children: "Products" }),
-            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_flowbite_react.Sidebar.Item, { href: "#", icon: import_ri.RiPhoneFill, children: "Sign In" }),
-            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_flowbite_react.Sidebar.Item, { href: "#", icon: import_ri.RiPhoneFill, children: "Sign Up" })
-          ] }) })
+            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_flowbite_react.Sidebar.Items, { children: /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)(import_flowbite_react.Sidebar.ItemGroup, { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
+                import_flowbite_react.Sidebar.Item,
+                {
+                  href: "#",
+                  icon: import_hi.HiChartPie,
+                  children: "Dashboard"
+                }
+              ),
+              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
+                import_flowbite_react.Sidebar.Item,
+                {
+                  href: "#",
+                  icon: import_hi.HiViewBoards,
+                  children: "Kanban"
+                }
+              ),
+              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
+                import_flowbite_react.Sidebar.Item,
+                {
+                  href: "#",
+                  icon: import_hi.HiInbox,
+                  children: "Inbox"
+                }
+              ),
+              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
+                import_flowbite_react.Sidebar.Item,
+                {
+                  href: "#",
+                  icon: import_hi.HiUser,
+                  children: "Users"
+                }
+              ),
+              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
+                import_flowbite_react.Sidebar.Item,
+                {
+                  href: "#",
+                  icon: import_hi.HiShoppingBag,
+                  children: "Products"
+                }
+              ),
+              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
+                import_flowbite_react.Sidebar.Item,
+                {
+                  href: "#",
+                  icon: import_hi.HiArrowSmRight,
+                  children: "Sign In"
+                }
+              ),
+              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
+                import_flowbite_react.Sidebar.Item,
+                {
+                  href: "#",
+                  icon: import_hi.HiTable,
+                  children: "Sign Up"
+                }
+              )
+            ] }) })
+          ]
         }
       ) }),
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("main", { className: "relative min-h-screen  sm:flex sm:items-center sm:justify-center ", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "relative sm:pb-16 sm:pt-8", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "mx-auto max-w-7xl px-1 py-2 sm:px-2 lg:px-8", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "... mt-3 flex flex-wrap justify-center gap-4 ", children: [
-          {
-            src: "https://api.codedruns.com/uploads/1678954762711Screenshot_20230316-090334_WhatsAppBusiness.jpg",
-            alt: "Fly.io",
-            name: "Mimi Baby",
-            location: "Ikeja, Lagos",
-            href: "https://fly.io"
-          },
-          {
-            src: "https://api.codedruns.com/uploads/1678954762711Screenshot_20230316-090334_WhatsAppBusiness.jpg",
-            alt: "SQLite",
-            href: "https://sqlite.org"
-          },
-          {
-            src: "https://api.codedruns.com/uploads/1678954762711Screenshot_20230316-090334_WhatsAppBusiness.jpg",
-            alt: "Prisma",
-            href: "https://prisma.io"
-          },
-          {
-            src: "https://api.codedruns.com/uploads/1678954762711Screenshot_20230316-090334_WhatsAppBusiness.jpg",
-            alt: "Tailwind",
-            href: "https://tailwindcss.com"
-          },
-          {
-            src: "https://api.codedruns.com/uploads/1678954762711Screenshot_20230316-090334_WhatsAppBusiness.jpg",
-            alt: "Cypress",
-            href: "https://www.cypress.io"
-          },
-          {
-            src: "https://api.codedruns.com/uploads/1678954762711Screenshot_20230316-090334_WhatsAppBusiness.jpg",
-            alt: "MSW",
-            href: "https://mswjs.io"
-          },
-          {
-            src: "https://api.codedruns.com/uploads/1678954762711Screenshot_20230316-090334_WhatsAppBusiness.jpg",
-            alt: "Vitest",
-            href: "https://vitest.dev"
-          },
-          {
-            src: "https://api.codedruns.com/uploads/1678954762711Screenshot_20230316-090334_WhatsAppBusiness.jpg",
-            alt: "Testing Library",
-            href: "https://testing-library.com"
-          },
-          {
-            src: "https://api.codedruns.com/uploads/1678954762711Screenshot_20230316-090334_WhatsAppBusiness.jpg",
-            alt: "Prettier",
-            href: "https://prettier.io"
-          },
-          {
-            src: "https://api.codedruns.com/uploads/1678954762711Screenshot_20230316-090334_WhatsAppBusiness.jpg",
-            alt: "ESLint",
-            href: "https://eslint.org"
-          },
-          {
-            src: "https://api.codedruns.com/uploads/1678954762711Screenshot_20230316-090334_WhatsAppBusiness.jpg",
-            alt: "TypeScript",
-            href: "https://typescriptlang.org"
-          }
-        ].map((img) => /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "max-w-sm", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_flowbite_react.Card, { className: "grid  justify-center p-1 transition hover:grayscale-0 focus:grayscale-0", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "object-contain", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
-            "img",
-            {
-              alt: img.alt,
-              src: img.src,
-              className: "rounded-xl object-contain"
-            }
-          ),
-          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h6", { className: "text-2xl font-bold tracking-tight text-gray-900 dark:text-white", children: img.name }),
-          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "font-normal text-green-400", children: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order." }),
-          /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "flex flex-wrap gap-6", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { children: [
-              /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "flex flex-wrap gap-3", children: [
-                /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_ri.RiPhoneFill, { className: "mt-1.5 text-white" }),
-                /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "text-white", children: "+234749485653" })
-              ] }),
-              /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "flex flex-wrap gap-3", children: [
-                /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_ri.RiMapPin2Fill, { className: "mt-1.5 text-white" }),
-                /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "text-white", children: img.location })
-              ] })
-            ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_react5.Link, { to: img.href, children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_flowbite_react.Button, { className: "mt-1", children: "View Profile" }) })
-          ] })
-        ] }) }) }, img.href)) }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("main", { className: "relative min-h-screen  sm:flex sm:items-center sm:justify-center ", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "relative sm:pb-16 sm:pt-8", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "mx-auto max-w-7xl px-1 py-2 sm:px-2 lg:px-8", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "... mt-3 flex flex-wrap justify-center gap-4 ", children: [
+        {
+          src: "https://api.codedruns.com/uploads/1678954762711Screenshot_20230316-090334_WhatsAppBusiness.jpg",
+          alt: "Fly.io",
+          name: "Mimi Baby",
+          location: "Ikeja, Lagos",
+          href: "https://fly.io"
+        },
+        {
+          src: "https://api.codedruns.com/uploads/1678954762711Screenshot_20230316-090334_WhatsAppBusiness.jpg",
+          alt: "SQLite",
+          href: "https://sqlite.org"
+        },
+        {
+          src: "https://api.codedruns.com/uploads/1678954762711Screenshot_20230316-090334_WhatsAppBusiness.jpg",
+          alt: "Prisma",
+          href: "https://prisma.io"
+        },
+        {
+          src: "https://api.codedruns.com/uploads/1678954762711Screenshot_20230316-090334_WhatsAppBusiness.jpg",
+          alt: "Tailwind",
+          href: "https://tailwindcss.com"
+        },
+        {
+          src: "https://api.codedruns.com/uploads/1678954762711Screenshot_20230316-090334_WhatsAppBusiness.jpg",
+          alt: "Cypress",
+          href: "https://www.cypress.io"
+        },
+        {
+          src: "https://api.codedruns.com/uploads/1678954762711Screenshot_20230316-090334_WhatsAppBusiness.jpg",
+          alt: "MSW",
+          href: "https://mswjs.io"
+        },
+        {
+          src: "https://api.codedruns.com/uploads/1678954762711Screenshot_20230316-090334_WhatsAppBusiness.jpg",
+          alt: "Vitest",
+          href: "https://vitest.dev"
+        },
+        {
+          src: "https://api.codedruns.com/uploads/1678954762711Screenshot_20230316-090334_WhatsAppBusiness.jpg",
+          alt: "Testing Library",
+          href: "https://testing-library.com"
+        },
+        {
+          src: "https://api.codedruns.com/uploads/1678954762711Screenshot_20230316-090334_WhatsAppBusiness.jpg",
+          alt: "Prettier",
+          href: "https://prettier.io"
+        },
+        {
+          src: "https://api.codedruns.com/uploads/1678954762711Screenshot_20230316-090334_WhatsAppBusiness.jpg",
+          alt: "ESLint",
+          href: "https://eslint.org"
+        },
+        {
+          src: "https://api.codedruns.com/uploads/1678954762711Screenshot_20230316-090334_WhatsAppBusiness.jpg",
+          alt: "TypeScript",
+          href: "https://typescriptlang.org"
+        }
+      ].map((img) => /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "max-w-sm", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_flowbite_react.Card, { className: "grid  justify-center p-1 transition hover:grayscale-0 focus:grayscale-0", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "object-contain", children: [
         /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
-          import_flowbite_react.Pagination,
+          "img",
           {
-            className: "justify-center",
-            currentPage: 1,
-            onPageChange,
-            showIcons: !0,
-            totalPages: 100
+            alt: img.alt,
+            src: img.src,
+            className: "rounded-xl object-contain"
           }
-        )
-      ] }) }) })
+        ),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h6", { className: "text-2xl font-bold tracking-tight text-gray-900 dark:text-white", children: img.name }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "font-normal text-green-400", children: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order." }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "flex flex-wrap gap-6", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "flex flex-wrap gap-3", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_ri.RiPhoneFill, { className: "mt-1.5 text-white" }),
+              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "text-white", children: "+234749485653" })
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "flex flex-wrap gap-3", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_ri.RiMapPin2Fill, { className: "mt-1.5 text-white" }),
+              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "text-white", children: img.location })
+            ] })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_react5.Link, { to: img.href, children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_flowbite_react.Button, { className: "mt-1", children: "View Profile" }) })
+        ] })
+      ] }) }) }, img.href)) }) }) }) })
     ] })
   ] });
 }
@@ -1042,7 +1083,7 @@ function NewNotePage() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "e429b466", entry: { module: "/build/entry.client-6CNAQZXI.js", imports: ["/build/_shared/chunk-ZIVUPZBS.js", "/build/_shared/chunk-BXQRMLZD.js", "/build/_shared/chunk-Q3IECNXJ.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-7FY32CXD.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-VKALBC7E.js", imports: ["/build/_shared/chunk-C4XMAHCO.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/healthcheck": { id: "routes/healthcheck", parentId: "root", path: "healthcheck", index: void 0, caseSensitive: void 0, module: "/build/routes/healthcheck-BQ2SXEZN.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/join": { id: "routes/join", parentId: "root", path: "join", index: void 0, caseSensitive: void 0, module: "/build/routes/join-YV6Q3YOP.js", imports: ["/build/_shared/chunk-JA76ZJ7B.js", "/build/_shared/chunk-FPOB764B.js", "/build/_shared/chunk-C4XMAHCO.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/login": { id: "routes/login", parentId: "root", path: "login", index: void 0, caseSensitive: void 0, module: "/build/routes/login-MDROQ2T3.js", imports: ["/build/_shared/chunk-JA76ZJ7B.js", "/build/_shared/chunk-FPOB764B.js", "/build/_shared/chunk-C4XMAHCO.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/logout": { id: "routes/logout", parentId: "root", path: "logout", index: void 0, caseSensitive: void 0, module: "/build/routes/logout-GPTXG6BX.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/notes": { id: "routes/notes", parentId: "root", path: "notes", index: void 0, caseSensitive: void 0, module: "/build/routes/notes-GY65ZNEJ.js", imports: ["/build/_shared/chunk-EXA2H3AC.js", "/build/_shared/chunk-FPOB764B.js", "/build/_shared/chunk-C4XMAHCO.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/notes.$noteId": { id: "routes/notes.$noteId", parentId: "routes/notes", path: ":noteId", index: void 0, caseSensitive: void 0, module: "/build/routes/notes.$noteId-JNHMC3EW.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !0 }, "routes/notes._index": { id: "routes/notes._index", parentId: "routes/notes", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/notes._index-2JPSR6HI.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/notes.new": { id: "routes/notes.new", parentId: "routes/notes", path: "new", index: void 0, caseSensitive: void 0, module: "/build/routes/notes.new-63ZJPGHR.js", imports: void 0, hasAction: !0, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, cssBundleHref: void 0, hmr: void 0, url: "/build/manifest-E429B466.js" };
+var assets_manifest_default = { version: "c2539f62", entry: { module: "/build/entry.client-6CNAQZXI.js", imports: ["/build/_shared/chunk-ZIVUPZBS.js", "/build/_shared/chunk-BXQRMLZD.js", "/build/_shared/chunk-Q3IECNXJ.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-7FY32CXD.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-GDXFJXWH.js", imports: ["/build/_shared/chunk-C4XMAHCO.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/healthcheck": { id: "routes/healthcheck", parentId: "root", path: "healthcheck", index: void 0, caseSensitive: void 0, module: "/build/routes/healthcheck-BQ2SXEZN.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/join": { id: "routes/join", parentId: "root", path: "join", index: void 0, caseSensitive: void 0, module: "/build/routes/join-YV6Q3YOP.js", imports: ["/build/_shared/chunk-JA76ZJ7B.js", "/build/_shared/chunk-FPOB764B.js", "/build/_shared/chunk-C4XMAHCO.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/login": { id: "routes/login", parentId: "root", path: "login", index: void 0, caseSensitive: void 0, module: "/build/routes/login-MDROQ2T3.js", imports: ["/build/_shared/chunk-JA76ZJ7B.js", "/build/_shared/chunk-FPOB764B.js", "/build/_shared/chunk-C4XMAHCO.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/logout": { id: "routes/logout", parentId: "root", path: "logout", index: void 0, caseSensitive: void 0, module: "/build/routes/logout-GPTXG6BX.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/notes": { id: "routes/notes", parentId: "root", path: "notes", index: void 0, caseSensitive: void 0, module: "/build/routes/notes-GY65ZNEJ.js", imports: ["/build/_shared/chunk-EXA2H3AC.js", "/build/_shared/chunk-FPOB764B.js", "/build/_shared/chunk-C4XMAHCO.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/notes.$noteId": { id: "routes/notes.$noteId", parentId: "routes/notes", path: ":noteId", index: void 0, caseSensitive: void 0, module: "/build/routes/notes.$noteId-JNHMC3EW.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !0 }, "routes/notes._index": { id: "routes/notes._index", parentId: "routes/notes", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/notes._index-2JPSR6HI.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/notes.new": { id: "routes/notes.new", parentId: "routes/notes", path: "new", index: void 0, caseSensitive: void 0, module: "/build/routes/notes.new-63ZJPGHR.js", imports: void 0, hasAction: !0, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, cssBundleHref: void 0, hmr: void 0, url: "/build/manifest-C2539F62.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", future = { unstable_cssModules: !1, unstable_cssSideEffectImports: !1, unstable_dev: !1, unstable_postcss: !1, unstable_tailwind: !1, unstable_vanillaExtract: !1, v2_errorBoundary: !0, v2_meta: !0, v2_routeConvention: !0 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
